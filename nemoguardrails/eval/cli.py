@@ -116,6 +116,7 @@ def _launch_ui(script: str, port: int = 8501):
 @app.command()
 def check_compliance(
     llm_judge: str = typer.Option(
+        ...,
         help="The name of the model to be used as a judge. "
         "The model needs to be configured in the `models` key in the evaluation config.",
     ),

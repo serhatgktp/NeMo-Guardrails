@@ -77,7 +77,7 @@ def resume():
 
 @app.command()
 def flow(
-    flow_name: str = typer.Argument(help="Name of flow or uid of a flow instance."),
+    flow_name: str = typer.Argument(..., help="Name of flow or uid of a flow instance."),
 ):
     """Shows all details about a flow or flow instance."""
     assert state
